@@ -12,7 +12,6 @@ phases:
       - echo "repo url is ${CODEBUILD_SOURCE_REPO_URL}"
       - echo "source version is ${CODEBUILD_SOURCE_VERSION}"
       - ls -alrth *
-      - git tag -l      
   build:
     commands:
       - echo "hello build"
