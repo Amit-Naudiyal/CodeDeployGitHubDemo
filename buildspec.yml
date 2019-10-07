@@ -16,7 +16,9 @@ phases:
     commands:
       - echo "hello build"
       - ./codebuild-git-wrapper.sh https://github.com/Amit-Naudiyal/CodeDeployGitHubDemo.git master
+      - ls -alrth *
       - git tag -l
+
 artifacts:
   files:
     - '**/*'
