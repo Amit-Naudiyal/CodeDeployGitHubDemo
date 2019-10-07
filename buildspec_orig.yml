@@ -1,8 +1,5 @@
 version: 0.2
 
-env:
-  git-credential-helper: yes
-
 phases:
   install:
     commands:
@@ -11,11 +8,12 @@ phases:
       - echo "commit ID is ${CODEBUILD_RESOLVED_SOURCE_VERSION}"
       - echo "repo url is ${CODEBUILD_SOURCE_REPO_URL}"
       - echo "source version is ${CODEBUILD_SOURCE_VERSION}"
+      - echo "cb webhook previous commit is ${CODEBUILD_WEBHOOK_PREV_COMMIT}"
+      - echo "cb webhook trigger is ${CODEBUILD_WEBHOOK_TRIGGER}"
       - ls -alrth *
   build:
     commands:
       - echo "hello build"
-      - ./codebuild-git-wrapper.sh https://github.com/Amit-Naudiyal/CodeDeployGitHubDemo.git master
 artifacts:
   files:
     - '**/*'
