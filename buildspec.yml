@@ -10,7 +10,7 @@ phases:
       - echo "source version is ${CODEBUILD_SOURCE_VERSION}"
       - echo "cb webhook previous commit is ${CODEBUILD_WEBHOOK_PREV_COMMIT}"
       - echo "cb webhook trigger is ${CODEBUILD_WEBHOOK_TRIGGER}"
-      - ls -lrth *
+      - ls -alrth *
   build:
     commands:
       - echo "hello build"
