@@ -4,6 +4,7 @@ phases:
   install:
     commands:
       - echo "hello install"
+      - echo "codebuild ID is ${CODEBUILD_BUILD_ID}"
   build:
     commands:
       - echo "hello build"
