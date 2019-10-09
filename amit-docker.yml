@@ -12,6 +12,7 @@ phases:
     commands:
        - echo Building Docker Container
        - docker build -t $LOCAL_IMAGE . 2> log.txt
+    finally:
        - cat log.txt
   post_build:
     commands:
